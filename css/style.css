@@ -1,0 +1,154 @@
+body {
+  color: #fff;
+  background-color: #000;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-top: 104px;
+	}
+
+a {
+  color: #fff;
+  text-decoration: none;
+	}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  top: 0;
+  left: 0;
+	}
+
+header h1 {
+  width: 64px;
+	}
+
+header nav a {
+  border-bottom: 2px solid rgba(0,0,0,0);
+  margin: 0 0 0 10px;
+  padding: 0 0 3px 0;
+  transition: border-bottom 0.3s ease-in;
+	}
+
+header nav a:hover {
+  border-color: #555;
+	}
+
+header nav .selected {
+  border-color: #fff;
+	}
+
+.photos {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  max-width: 1080px;
+  padding: 0 10px 0 10px;
+	}
+
+.photo {
+  margin: 10px;
+  position: relative;
+  width: 300px;
+	}
+
+.photo img {
+  transition: filter 0.3s;
+	}
+
+.photo:hover img {
+  filter: grayscale(100%);
+	}
+
+.photo:hover .overlay {
+  opacity: 1;
+	}
+
+.photo h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  
+  position: absolute;
+  top: -15px;
+  left: -15px;
+	}
+
+.small {
+  width: 220px;
+	}
+
+.large {
+  width: 400px;
+	}
+
+.overlay {
+  background-color: rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+  
+  height: 100%;
+  width: 100%;
+  
+  position: absolute;  
+  top: 0;
+  left: 0;
+	}
+
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+	}
+
+footer nav a {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  width: 16px;
+	}
+
+/* LIST PAGE */
+
+.list {
+  font-size: 48px;
+  height: 100vh;
+  line-height: 1.2;
+  margin: 100px auto 0 auto;
+  max-width: 740px;
+	}
+
+.list a img {
+  max-width: 500px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  transform: translate(-50%, -50%);
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+	}
+
+.list a:hover img {
+  opacity: 1;
+  }
+
+.list a:after {
+  content: '/';
+	}
+
+.list a:last-child:after {
+  content: '';
+	}
+
